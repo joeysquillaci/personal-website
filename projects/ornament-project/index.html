@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Ornament | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="Interactive ESP32 ornament featuring embedded hardware, an e-ink display, battery power, and a custom 3D-printed enclosure."
+  >
+  <link rel="preload" href="stl/Body.stl" as="fetch">
+  <link rel="preload" href="stl/Bow.stl" as="fetch">
+  <link rel="preload" href="stl/Enclosure.stl" as="fetch">
+  <link rel="preload" href="stl/Enclosure Closing Side.stl" as="fetch">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../../index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="../../all-projects.html">All Projects</a>
+              <a href="../../projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="../../projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="../../projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="../../projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="../../projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="../../experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="section container">
+        <div class="project-hero">
+          <div class="project-hero__copy reveal">
+            <p class="eyebrow">Personal Build | Embedded Hardware</p>
+            <h1>ESP32 Ornament</h1>
+            <div class="project-card__tags project-hero__tags">
+              <span>ESP32</span>
+              <span>E-Ink Display</span>
+              <span>Charging Module</span>
+              <span>Buck-Boost Power</span>
+              <span>3D Printing</span>
+            </div>
+            <p>
+              This project was intended to create a holiday ornament that behaves
+              like a small embedded product rather than a static decoration. The
+              build combines an ESP32, a charging module, a buck-boost converter,
+              and an e-ink display to show different Christmas-themed messages in
+              a battery-powered enclosure.
+            </p>
+            <p>
+              What makes the project interesting is the combination of system design
+              and physical presentation. The electronics needed to charge safely,
+              regulate power for the display and controller, and fit into a compact
+              ornament enclosure that still looked intentional as a finished object.
+              That made it a strong exercise in moving between embedded hardware,
+              display integration, and enclosure design.
+            </p>
+          </div>
+
+          <aside class="project-image-placeholder project-image-placeholder--top reveal" aria-label="Main ESP32 ornament photo">
+            <img
+              class="project-image-placeholder__image"
+              src="assets/1.jpg"
+              alt="Main internal view of the ESP32 ornament showing the ESP32, charging module, buck-boost converter, and battery"
+            >
+            <p class="project-image-caption">Primary internal view of the ornament electronics package.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="metric-grid">
+          <article class="metric-card reveal">
+            <strong>Power Source</strong>
+            <span>1000 mAh battery with charging and regulated conversion</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Control</strong>
+            <span>ESP32-based control for display behavior and message updates</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Display</strong>
+            <span>E-ink display connected over a 4-wire SPI interface</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Fabrication</strong>
+            <span>Custom multi-part enclosure prepared for 3D printing and assembly</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Project Overview</h2>
+            <p>
+              The goal of this build was to create an ornament that could display
+              different Christmas-themed messages on an e-ink screen while staying
+              self-contained and rechargeable. That meant planning around the display,
+              the ESP32 control path, the power architecture, and the shape of the
+              enclosure all at the same time.
+            </p>
+            <p>
+              Instead of treating the enclosure as an afterthought, the project was
+              structured from the start as both an electronics problem and a product
+              packaging problem. The electronics stack had to be compact and practical,
+              while the final result still needed to look like a finished ornament rather
+              than an exposed prototype.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Architecture</h2>
+            <ul>
+              <li>A TP4056 charging module handles battery charging from Micro USB input.</li>
+              <li>A 1000 mAh battery provides the portable power source for the ornament.</li>
+              <li>A buck/boost converter regulates the voltage for the rest of the system.</li>
+              <li>An ESP32 acts as the main controller for message logic and system behavior.</li>
+              <li>An e-ink display communicates over a 4-wire SPI interface and defines the visual output of the ornament.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <figure class="project-figure reveal">
+          <img
+            class="project-figure__image"
+            src="assets/OrnamentBlockDiagram.png"
+            alt="Block diagram of the ornament hardware showing charger, battery, buck-boost converter, MCU, and e-ink display"
+          >
+          <figcaption class="project-figure__caption">
+            Block-level hardware architecture showing the charging path, battery supply,
+            regulated power flow, ESP32 connections, and e-ink display interface.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Design Thinking</h2>
+            <p>
+              From a systems perspective, the project is really about integration.
+              The charging module, battery, buck-boost stage, ESP32, and display each
+              solve a different part of the problem, but they only become useful when
+              arranged into a reliable and physically compact assembly.
+            </p>
+            <p>
+              That makes the ornament a strong example of product-style engineering:
+              the electronics, mechanical layout, and final presentation all influence
+              one another.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Physical Build</h2>
+            <p>
+              The STL files for this project reflect the mechanical side of that work.
+              The printed parts divide the ornament into logical pieces so the assembly
+              can support the screen, internal electronics, and the decorative outer form.
+            </p>
+            <p>
+              Keeping those parts separate makes it easier to iterate on fit, tolerances,
+              and assembly without having to redesign the entire object from scratch.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-gallery project-gallery--three">
+          <figure class="project-gallery-card reveal">
+            <img src="assets/2.jpg" alt="Front view of the completed ornament showing the e-ink display message">
+            <figcaption>Completed front view of the ornament, with the e-ink display presenting a Christmas-themed message.</figcaption>
+          </figure>
+          <figure class="project-gallery-card reveal">
+            <img src="assets/3.jpg" alt="Rear view of the ornament showing the back housing and external details">
+            <figcaption>Rear view of the finished enclosure, showing how the housing supports both electronics and presentation.</figcaption>
+          </figure>
+          <figure class="project-gallery-card reveal">
+            <img src="assets/4.jpg" alt="Exploded view of the ESP32 ornament showing the enclosure parts and internal electronics">
+            <figcaption>Exploded assembly view highlighting the internal packaging of the electronics and the multi-part printed shell.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">3D model views</p>
+          <h2>Interactive STL previews of the printed ornament components.</h2>
+          <p>
+            These model views let the individual printed parts be inspected separately
+            before they are assembled into the final ornament.
+          </p>
+        </div>
+        <div class="stl-viewer-grid">
+          <article class="stl-viewer-card reveal">
+            <h3>Body</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="stl/Body.stl"
+              data-model-name="Ornament Body"
+            >
+              <div class="stl-viewer__status">Loading `Body.stl`...</div>
+            </div>
+          </article>
+
+          <article class="stl-viewer-card reveal">
+            <h3>Bow</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="stl/Bow.stl"
+              data-model-name="Ornament Bow"
+            >
+              <div class="stl-viewer__status">Loading `Bow.stl`...</div>
+            </div>
+          </article>
+
+          <article class="stl-viewer-card reveal">
+            <h3>Enclosure</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="stl/Enclosure.stl"
+              data-model-name="Ornament Enclosure"
+            >
+              <div class="stl-viewer__status">Loading `Enclosure.stl`...</div>
+            </div>
+          </article>
+
+          <article class="stl-viewer-card reveal">
+            <h3>Enclosure Closing Side</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="stl/Enclosure Closing Side.stl"
+              data-model-name="Ornament Enclosure Closing Side"
+            >
+              <div class="stl-viewer__status">Loading `Enclosure Closing Side.stl`...</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script type="module" src="../../stl-viewer.js"></script>
+</body>
+</html>

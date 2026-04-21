@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equity Education | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="Educational equity analysis prototype combining LSTM forecasting, technical indicators, and an interactive GUI to help novice traders interpret market behavior."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../../index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="../../all-projects.html">All Projects</a>
+              <a href="../../projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="../../projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="../../projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="../../projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="../../projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="../../experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="section container equity-tight-section equity-tight-section--top">
+        <div class="project-hero">
+          <div class="project-hero__copy reveal">
+            <p class="eyebrow">Education Platform | AI Forecasting Prototype</p>
+            <h1>Equity Education</h1>
+            <div class="project-card__tags project-hero__tags">
+              <span>LSTM</span>
+              <span>Equity Forecasting</span>
+              <span>Tkinter GUI</span>
+              <span>Technical Indicators</span>
+              <span>Educational Tooling</span>
+            </div>
+            <p>
+              Equity Education is a Track 2 prototype designed to help beginner
+              traders interpret market behavior using an educational interface that
+              combines model predictions with supporting chart context.
+            </p>
+            <p>
+              The system pairs an LSTM-based forecasting pipeline with a Python GUI
+              to display predictions, technical indicators, and training behavior in
+              a format that is easier to explore than raw market data alone.
+            </p>
+            <div class="project-links">
+              <a class="button button-primary magnetic" href="assets/docs/equityeducation_report.pdf" target="_blank" rel="noreferrer">
+                Open Full Report
+              </a>
+            </div>
+          </div>
+
+          <aside class="project-image-placeholder project-image-placeholder--top project-image-placeholder--offset reveal" aria-label="Equity Education training dashboard view">
+            <img
+              class="project-image-placeholder__image"
+              src="assets/images/Training.png"
+              alt="Equity Education training interface showing model training controls and progress feedback"
+            >
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container equity-tight-section equity-tight-section--bottom">
+        <div class="metric-grid">
+          <article class="metric-card reveal">
+            <strong>Model</strong>
+            <span>LSTM sequence model for short/medium/long forecasting horizons</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Data</strong>
+            <span>Yahoo Finance OHLCV data with engineered technical indicators</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Target Users</strong>
+            <span>Beginner traders needing interpretable prediction context</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Outcome</strong>
+            <span>Educational decision-support workflow with configurable training</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Overview</h2>
+            <p>
+              The project addresses a practical problem for novice users: technical
+              indicators are widely available, but often difficult to interpret without
+              experience. Equity Education turns those signals into a guided workflow
+              that connects predictions to readable visual context.
+            </p>
+            <p>
+              Instead of treating forecasting as an isolated model output, the system
+              is built as an instructional interface where training progress, market
+              context, and prediction behavior are visible together.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Approach & Takeaways</h2>
+            <p>
+              The workflow combines configurable LSTM training, feature engineering,
+              and evaluation views in a Tkinter GUI. Users can choose training setups,
+              run experiments, and compare predicted movement against historical price
+              behavior and indicators.
+            </p>
+            <p>
+              Reported results show stable, interpretable predictions with directional
+              performance in the low-to-mid 50% range, reinforcing the prototype’s
+              strength as an educational tool rather than a standalone trading engine.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">System & Evaluation</p>
+          <h2>Prototype architecture, workflow context, and one-week directional evaluation snapshots.</h2>
+        </div>
+        <div class="project-gallery project-gallery--two equity-system-grid">
+          <figure class="project-gallery-card project-gallery-card--table reveal">
+            <img src="assets/images/System.png" alt="System layout and workflow diagram for Equity Education UI and model pipeline">
+            <figcaption>System view showing how data, forecasting, and educational interface components connect in the prototype.</figcaption>
+          </figure>
+          <article class="content-panel reveal">
+            <h2>One-Week Directional Results</h2>
+            <ul class="results-list">
+              <li>
+                <strong>SPY Evaluation</strong>
+                <span>Directionally correct on 4 of 5 days, with predicted directional accuracy values in the low-to-mid 50% range.</span>
+              </li>
+              <li>
+                <strong>AAPL Evaluation</strong>
+                <span>Directionally correct on 3 of 5 days, highlighting more difficulty adapting to faster single-stock movement.</span>
+              </li>
+              <li>
+                <strong>Interpretation</strong>
+                <span>The prototype was most effective as an interpretive, educational decision-support tool rather than a high-confidence forecasting engine.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="project-gallery project-gallery--two equity-results-grid">
+          <figure class="project-gallery-card project-gallery-card--table reveal">
+            <h3 class="project-table-card__title">SPY One-Week Evaluation</h3>
+            <img src="assets/images/spy_results.png" alt="One-week SPY evaluation table showing predicted and actual movement with directional correctness">
+            <figcaption>SPY results table from the report, showing day-by-day predicted move, actual move, directional accuracy, and direction correctness.</figcaption>
+          </figure>
+          <figure class="project-gallery-card project-gallery-card--table reveal">
+            <h3 class="project-table-card__title">AAPL One-Week Evaluation</h3>
+            <img src="assets/images/aapl_results.png" alt="One-week AAPL evaluation table showing predicted and actual movement with directional correctness">
+            <figcaption>AAPL results table from the report, used to compare model behavior on a more volatile single-stock scenario.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section container">
+        <article class="content-panel reveal">
+          <h2>Project Documents</h2>
+          <h3>Report</h3>
+          <div class="document-embed">
+            <iframe
+              title="Equity Education report"
+              src="assets/docs/equityeducation_report.pdf"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <h3>Slides</h3>
+          <div class="document-embed">
+            <iframe
+              title="Equity Education slides"
+              src="assets/docs/equityeducation_slides.pdf"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="project-links">
+            <a class="button button-secondary" href="assets/docs/equityeducation_report.pdf" target="_blank" rel="noreferrer">
+              Open Report PDF
+            </a>
+            <a class="button button-secondary" href="assets/docs/equityeducation_slides.pdf" target="_blank" rel="noreferrer">
+              Open Slides PDF
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

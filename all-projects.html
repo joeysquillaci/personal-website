@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="Browse all engineering projects in Joey Squillaci's portfolio, including embedded systems, VLSI, and hardware-software builds."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="all-projects.html">All Projects</a>
+              <a href="projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page" id="top">
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">All projects</p>
+          <h2>A full look at the engineering work behind this portfolio.</h2>
+          <p>
+            From VLSI design and embedded systems to hardware-software builds,
+            these projects reflect practical implementation, testing, and
+            real-world engineering constraints.
+          </p>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="projects-grid projects-grid--stacked" id="projects-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

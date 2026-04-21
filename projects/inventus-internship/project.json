@@ -1,0 +1,11 @@
+{
+  "slug": "inventus-internship",
+  "title": "Inventus Internship",
+  "category": "Embedded Systems",
+  "summary": "High-level case study of internship work involving embedded software, serial communication, battery-system testing, documentation, and hardware-facing engineering workflows.",
+  "timeline": "May 2023 - August 2023",
+  "organization": "Inventus Power",
+  "tags": ["Python", "Embedded C", "Serial Communication", "Battery Systems"],
+  "status": "documented",
+  "featured": true
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "ornament-project",
+  "title": "ESP32 Ornament",
+  "category": "Personal Build",
+  "summary": "Interactive holiday ornament built around an ESP32, charging module, buck-boost converter, and e-ink display to show rotating Christmas-themed messages.",
+  "timeline": "In Progress",
+  "organization": "Personal Project",
+  "tags": ["ESP32", "E-Ink Display", "3D Printing"],
+  "status": "documented",
+  "featured": true
+}

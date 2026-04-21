@@ -1,0 +1,24 @@
+{
+  "slug": "16-bit-carry-select-adder",
+  "title": "16-Bit Carry Select Adder",
+  "category": "VLSI Design",
+  "summary": "Designed and verified a custom 16-bit carry-select adder in Cadence Virtuoso, including schematic design, layout, functional validation, and timing and energy analysis.",
+  "timeline": "August 2025 - December 2025",
+  "organization": "Purdue University",
+  "tags": ["Cadence Virtuoso", "CMOS", "Digital Design"],
+  "status": "documented",
+  "featured": true,
+  "reportPath": "projects/16-bit-carry-select-adder/assets/final-report.pdf",
+  "constraints": {
+    "maxDelay": "2 ns",
+    "maxEnergy": "700 fJ",
+    "inputRiseFall": "50 ps",
+    "outputLoad": "2 fF"
+  },
+  "results": {
+    "schematicDelay": "410.4 ps average",
+    "schematicEnergy": "121.1 fJ",
+    "layoutDelay": "1.245 ns",
+    "layoutEnergy": "366.9 fJ estimated"
+  }
+}

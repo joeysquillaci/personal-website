@@ -1,0 +1,11 @@
+{
+  "slug": "equity-education",
+  "title": "Equity Education",
+  "category": "Education Platform",
+  "summary": "Educational equity analysis prototype combining LSTM forecasting, technical indicators, and an interactive GUI for novice market interpretation.",
+  "timeline": "Spring 2026",
+  "organization": "Purdue University",
+  "tags": ["LSTM", "Tkinter", "Forecasting", "Equity Analysis"],
+  "status": "documented",
+  "featured": true
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joey | Engineering Portfolio</title>
+  <meta
+    name="description"
+    content="Engineering portfolio highlighting embedded systems, vehicle networks, software tooling, VLSI, and hands-on technical projects."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-view">
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="all-projects.html">All Projects</a>
+              <a href="projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="home-page">
+      <section class="hero section container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Electrical and computer engineering portfolio</p>
+          <h1>
+            Building systems, software, and technical projects
+            <span>worth exploring.</span>
+          </h1>
+          <p class="hero-text mobile-condense">
+            This portfolio is focused on embedded systems, vehicle networking,
+            software tooling, and engineering projects. It is structured to
+            showcase both hands-on technical work and the experience behind it.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary magnetic" href="#projects">View Projects</a>
+          </div>
+          <div class="hero-stats reveal">
+            <article class="stat-card">
+              <strong class="counter" data-target="5">0</strong>
+              <span>Highlighted projects</span>
+            </article>
+            <article class="stat-card">
+              <strong class="counter" data-target="3">0</strong>
+              <span>Relevant roles</span>
+            </article>
+            <article class="stat-card">
+              <strong class="counter" data-target="2">0</strong>
+              <span>Engineering degrees</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container quick-snapshot" id="snapshot">
+        <article class="profile-card reveal">
+          <div class="profile-card__body">
+            <p class="profile-kicker">Professional snapshot</p>
+            <div class="profile-card__layout">
+              <div class="profile-card__lead">
+                <h2 class="mobile-condense">I build practical engineering systems and enjoy the work behind making them reliable, testable, and useful.</h2>
+                <p class="profile-card__intro mobile-condense">
+                  My background spans embedded software, vehicle communication, diagnostics, digital design, and hands-on hardware development. This portfolio brings that mix together through projects that are technical, build-focused, and grounded in real engineering constraints.
+                </p>
+                <div class="skill-pills">
+                  <span>Embedded Systems</span>
+                  <span>Vehicle Networks</span>
+                  <span>Digital Design</span>
+                  <span>Validation</span>
+                </div>
+              </div>
+              <div class="profile-focus-grid">
+                <article class="profile-focus-item">
+                  <span>Current Work</span>
+                  <strong>Lead System Engineer at International Motors, focused on vehicle networks, diagnostics, and standards-driven system integration.</strong>
+                </article>
+                <article class="profile-focus-item">
+                  <span>Academic Foundation</span>
+                  <ul class="profile-focus-list">
+                    <li>B.S. in Computer Engineering - University of Illinois Chicago</li>
+                    <li>M.S. studies in Electrical and Computer Engineering - Purdue University</li>
+                  </ul>
+                </article>
+                <article class="profile-focus-item">
+                  <span>Relevant Skills</span>
+                  <ul class="profile-focus-list">
+                    <li>VLSI and digital design</li>
+                    <li>Vehicle systems and diagnostics</li>
+                    <li>Embedded software and hardware integration</li>
+                    <li>Engineering validation and technical tooling</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section container" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected projects across embedded systems, digital design, software, and hardware builds.</h2>
+          <p class="mobile-condense">
+            A collection of work that reflects how I approach engineering problems,
+            from system-level design and validation to implementation, tooling, and
+            physical prototyping.
+          </p>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+
+      <section class="section container" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="mobile-condense">Engineering experience shaped by embedded systems, diagnostics, and practical hardware-software integration.</h2>
+        </div>
+        <div class="about-card about-card--large reveal">
+          <div class="about-highlights">
+            <article class="about-highlight">
+              <span class="about-highlight__label">Current Role</span>
+              <strong>Lead System Engineer</strong>
+              <p>International Motors</p>
+            </article>
+            <article class="about-highlight">
+              <span class="about-highlight__label">Undergraduate</span>
+              <strong>B.S. Computer Engineering</strong>
+              <p>University of Illinois at Chicago</p>
+            </article>
+            <article class="about-highlight">
+              <span class="about-highlight__label">Graduate</span>
+              <strong>M.S. Electrical & Computer Engineering</strong>
+              <p>Purdue University</p>
+            </article>
+          </div>
+          <a class="about-card__resume button button-primary magnetic" href="assets/docs/Resume.pdf" target="_blank" rel="noreferrer">
+            View Resume
+          </a>
+        </div>
+        <div class="section-heading section-heading--sub reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 class="mobile-condense">Core technical strengths across software, systems, and engineering tools.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Embedded & Systems Programming</h3>
+            <p>Python, Embedded C, C++, command-line tooling, hardware interfacing, and low-level debugging.</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Vehicle Networks & Diagnostics</h3>
+            <p>CAN bus analysis, J1939 standards, Vector tooling, DBC development, and signal validation.</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Engineering Tools & Design</h3>
+            <p>Cadence Virtuoso, Arduino, SolidWorks, Autodesk Inventor, Git, Jira, Visio, and documentation workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Work experience</p>
+          <h2 class="mobile-condense">Professional experience across vehicle systems, embedded engineering, and technical support.</h2>
+          <p class="mobile-condense">
+            Roles that have shaped my background in diagnostics, communication
+            systems, embedded development, and hands-on technical problem solving.
+          </p>
+        </div>
+        <div class="experience-grid" id="experience-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

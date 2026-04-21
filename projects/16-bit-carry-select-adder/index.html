@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16-Bit Carry Select Adder | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="Case-study page for a 16-bit carry-select adder designed and validated in Cadence Virtuoso."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../../index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="../../all-projects.html">All Projects</a>
+              <a href="../../projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="../../projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="../../projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="../../projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="../../projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="../../experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="section container">
+        <div class="project-hero">
+          <div class="project-hero__copy reveal">
+            <p class="eyebrow">VLSI Design | Purdue University</p>
+            <h1>16-Bit Carry Select Adder</h1>
+            <div class="project-card__tags project-hero__tags">
+              <span>Cadence Virtuoso</span>
+              <span>CMOS</span>
+              <span>Layout Validation</span>
+              <span>Timing Analysis</span>
+            </div>
+            <p>
+              This project focused on designing, laying out, and validating a
+              custom 16-bit carry-select adder in Cadence Virtuoso. The work
+              covered transistor-level gate construction, hierarchical block design,
+              DRC/LVS-clean layout, and worst-case timing and energy analysis.
+            </p>
+            <p>
+              The final design met the project requirements with a schematic delay
+              of 410.4 ps average, a layout delay of 1.245 ns, and an estimated
+              layout energy of 366.9 fJ after post-layout analysis. The assignment
+              required the adder to stay below 2 ns worst-case delay and 700 fJ
+              energy, so the project ultimately validated both the circuit
+              architecture and the physical implementation.
+            </p>
+            <p>
+              Beyond the final numbers, the project was a good demonstration of how
+              transistor sizing, full-adder topology choice, hierarchical design,
+              and extracted layout behavior all affect real performance in VLSI work.
+            </p>
+
+            <div class="project-links">
+              <a class="button button-primary magnetic" href="assets/final-report.pdf" target="_blank" rel="noreferrer">
+                Open Full Report
+              </a>
+              <a class="button button-secondary" href="../../index.html#projects">More Projects</a>
+            </div>
+          </div>
+
+          <aside class="project-image-placeholder reveal" aria-label="CMOS inverter schematic">
+            <img
+              class="project-image-placeholder__image"
+              src="assets/inverter.png"
+              alt="CMOS inverter schematic used in the 16-bit carry select adder project"
+            >
+            <p class="project-image-caption">Inverter block utilizing CMOS logic</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="metric-grid">
+          <article class="metric-card reveal">
+            <strong>Delay Limit</strong>
+            <span>2 ns maximum worst-case propagation delay</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Energy Limit</strong>
+            <span>700 fJ maximum energy target</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Schematic Result</strong>
+            <span>410.4 ps average delay and 121.1 fJ energy</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Layout Result</strong>
+            <span>1.245 ns delay and 366.9 fJ estimated energy</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Overview</h2>
+            <p>
+              The design goal was to create a 16-bit carry-select adder that met
+              strict performance constraints while remaining DRC-clean and LVS-clean
+              after layout extraction. The CSA architecture was chosen to reduce
+              carry propagation delay compared to a standard ripple-carry adder.
+            </p>
+            <p>
+              The final implementation divided the 16-bit addition into 4-bit
+              blocks, using one ripple-carry adder for the least significant bits
+              and three carry-select blocks for the remaining sections.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Design Constraints</h2>
+            <ul>
+              <li>16-bit adder width with 4-bit subdivision blocks</li>
+              <li>Worst-case propagation delay less than or equal to 2 ns</li>
+              <li>Energy consumption less than or equal to 700 fJ</li>
+              <li>50 ps input rise and fall times</li>
+              <li>2 fF output load for evaluation</li>
+              <li>DRC-clean and LVS-clean post-layout validation</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Architecture</h2>
+            <ul>
+              <li>The first 4 bits are handled by a 4-bit ripple-carry adder because the carry-in is known at the start.</li>
+              <li>The upper 12 bits are split into three 4-bit carry-select blocks.</li>
+              <li>Each carry-select block computes two outcomes in parallel: carry-in equals 0 and carry-in equals 1.</li>
+              <li>2-bit multiplexers select the correct carry-out and 4-bit multiplexers select the correct summed outputs.</li>
+              <li>The final system is composed of seven 4-bit RCAs, three 2-bit MUXes, and three 4-bit MUXes.</li>
+            </ul>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Implementation Notes</h2>
+            <ul>
+              <li>Logic gates were sized to balance rise and fall propagation delays.</li>
+              <li>A mirror-topology full adder was selected after a gate-based implementation exceeded the timing requirement.</li>
+              <li>Hierarchical block construction simplified the final schematic and layout process.</li>
+              <li>The layout was completed in Cadence Virtuoso XL using two metal layers.</li>
+              <li>Post-layout extraction was used to compare ideal schematic behavior against physical implementation behavior.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <figure class="project-figure reveal">
+          <img
+            class="project-figure__image"
+            src="assets/16BitBlockDiagram.png"
+            alt="Block diagram showing the 16-bit carry select adder architecture and carry-select partitioning"
+          >
+          <figcaption class="project-figure__caption">
+            Block-level architecture of the 16-bit carry-select adder, illustrating
+            the 4-bit partitioning strategy and multiplexed carry-selection path.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Measured Results</h2>
+            <ul class="results-list">
+              <li>
+                <strong>Schematic Worst-Case Delay</strong>
+                <span>394.1 ps rising, 426.7 ps falling, for a 410.4 ps average.</span>
+              </li>
+              <li>
+                <strong>Schematic Worst-Case Energy</strong>
+                <span>121.1 fJ, comfortably within the 700 fJ project limit.</span>
+              </li>
+              <li>
+                <strong>Layout Worst-Case Delay</strong>
+                <span>1.245 ns from the least significant input to the most significant output.</span>
+              </li>
+              <li>
+                <strong>Layout Energy Estimate</strong>
+                <span>366.9 fJ estimated using proportional scaling after the direct layout calculation returned an eval error.</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Takeaways</h2>
+            <p>
+              The project successfully met the timing and energy constraints at both
+              the schematic and layout levels, validating the CSA as an efficient
+              architecture for this assignment. One of the most useful insights was
+              how much implementation details matter after extraction: post-layout
+              analysis materially changed the observed performance and made the
+              extracted view essential for a credible result.
+            </p>
+            <p>
+              The report also highlights a practical engineering lesson: when one
+              analysis path breaks, such as the layout energy calculation here, a
+              reasonable and clearly justified estimation method can still support a
+              sound conclusion.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>
