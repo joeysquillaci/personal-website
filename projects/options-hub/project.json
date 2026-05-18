@@ -1,0 +1,11 @@
+{
+  "slug": "options-hub",
+  "title": "Options Hub",
+  "category": "Trading Tools",
+  "summary": "Web-based options dashboard with a React frontend and FastAPI backend for position tracking, P/L monitoring, option chain inspection, and AI-assisted strategy discussion.",
+  "timeline": "2026",
+  "organization": "Personal Project",
+  "tags": ["React", "FastAPI", "SQLite", "Tradier API", "Gemini API"],
+  "status": "documented",
+  "featured": true
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Options Hub | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="Web-based options trading dashboard built with React and FastAPI, featuring SQLite position tracking, Tradier market data integration, and a Gemini-powered assistant."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../../index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="../../all-projects.html">All Projects</a>
+              <a href="../../projects/options-hub/index.html">Options Hub</a>
+              <a href="../../projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="../../projects/inventus-internship/index.html">Inventus Internship</a>
+              <a href="../../projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="../../projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="../../projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="../../experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="section container">
+        <div class="project-hero">
+          <div class="project-hero__copy reveal">
+            <p class="eyebrow">Trading Tools | Full-Stack Application</p>
+            <h1>Options Hub</h1>
+            <div class="project-card__tags project-hero__tags">
+              <span>React + Vite</span>
+              <span>FastAPI</span>
+              <span>SQLite</span>
+              <span>Tradier API</span>
+              <span>Gemini Assistant</span>
+            </div>
+            <p>
+              This project is a web-based options dashboard built to manage positions,
+              monitor P/L, and inspect option chains in one workflow. The frontend is
+              implemented with React, while a FastAPI backend handles market data
+              requests, persistence, and AI-assistant endpoints.
+            </p>
+            <p>
+              Position records are stored in SQLite, pricing data is pulled from Tradier,
+              and a Gemini-powered assistant can discuss strategy and position context.
+              The app is organized around practical trader workflows: dashboard review,
+              ledger management, chain lookup, settings, and AI chat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <figure class="project-figure reveal">
+          <img
+            class="project-figure__image"
+            src="assets/dashboard.png"
+            alt="Options Trading Dashboard main dashboard view with open-position pricing snapshot and P/L chart"
+          >
+          <figcaption class="project-figure__caption">
+            Dashboard view with live open-position pricing and portfolio-level P/L tracking.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section container">
+        <div class="metric-grid">
+          <article class="metric-card reveal">
+            <strong>Frontend</strong>
+            <span>React, Vite, React Router, Axios, Recharts</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Backend</strong>
+            <span>FastAPI, Uvicorn, pandas, requests, dotenv</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Data Layer</strong>
+            <span>SQLite position storage and calculated close metrics</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>External APIs</strong>
+            <span>Tradier options data and Gemini AI chat integration</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Application Scope</h2>
+            <ul>
+              <li>Track open and closed options positions in a ledger</li>
+              <li>Calculate and monitor running P/L over time</li>
+              <li>Fetch quotes, option chains, and contract pricing</li>
+              <li>Filter chain strikes around spot with configurable range</li>
+              <li>Import structured position data from Excel</li>
+              <li>Use Gemini for position-specific discussion and notes</li>
+            </ul>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Core Sections</h2>
+            <ul>
+              <li><strong>Dashboard:</strong> Open-position pricing snapshot and total P/L charting</li>
+              <li><strong>Ledger:</strong> Add, edit, close, delete, and roll positions with row-level actions</li>
+              <li><strong>Option Chain:</strong> Calls and puts lookup by ticker and expiration</li>
+              <li><strong>AI Assistant:</strong> Backend-routed Gemini chat with position context support</li>
+              <li><strong>Settings:</strong> Profile preferences and strike-range controls</li>
+              <li><strong>Notebook:</strong> Reserved placeholder page for future expansion</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <figure class="project-figure reveal">
+          <img
+            class="project-figure__image"
+            src="assets/optionschain.png"
+            alt="Options chain view showing calls and puts tables with strike filtering controls"
+          >
+          <figcaption class="project-figure__caption">
+            Option chain screen for calls/puts exploration with configurable strike filtering.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Architecture Notes</h2>
+            <p>
+              The backend exposes REST endpoints for positions, market data, settings,
+              and AI chat while the frontend consumes those endpoints through a shared
+              API layer. During development, Vite proxies `/api` calls to the FastAPI
+              server for a clean local workflow.
+            </p>
+            <p>
+              SQLite is used for durable position records and close-trade metrics such
+              as collateral, P/L, days, ROC, and annualized ROC. Historical P/L chart
+              points are retained in browser local storage through the frontend context.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Operational & Security Notes</h2>
+            <ul>
+              <li>Backend requires a Tradier token for quotes and chain data.</li>
+              <li>Gemini key is optional unless AI chat endpoints are used.</li>
+              <li>Tokens and API keys should never be committed to source control.</li>
+              <li>CORS is configured for local development origins.</li>
+              <li>This project is educational tooling and not financial advice.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

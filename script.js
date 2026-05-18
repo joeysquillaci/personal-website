@@ -66,6 +66,16 @@ function applyFeatureVisibility() {
 
 const projects = [
   {
+    id: "options-hub",
+    slug: "options-hub",
+    category: "Trading Tools",
+    title: "Options Hub",
+    summary:
+      "Web-based options dashboard with React and FastAPI for ledger tracking, P/L monitoring, option chain pricing via Tradier, and Gemini-assisted position discussion.",
+    tags: ["React", "FastAPI", "SQLite"],
+    pageHref: "projects/options-hub/index.html",
+  },
+  {
     id: "carry-select-adder",
     slug: "16-bit-carry-select-adder",
     category: "VLSI Design",
