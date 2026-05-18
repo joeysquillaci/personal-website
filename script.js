@@ -89,7 +89,7 @@ const projects = [
     id: "military-bcds",
     slug: "inventus-internship",
     category: "Embedded Systems",
-    title: "Inventus Internship",
+    title: "Inventus Power",
     summary:
       "High-level case study of internship work involving embedded software, serial communication, battery-system testing, documentation, and production-floor engineering support.",
     tags: ["Python", "Embedded C", "Battery Systems"],

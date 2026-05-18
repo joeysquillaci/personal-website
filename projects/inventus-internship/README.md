@@ -1,4 +1,4 @@
-# Inventus Internship
+# Inventus Power
 
 This folder is now centered on the overall internship experience rather than a single NDA-sensitive project.
 
