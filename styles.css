@@ -346,6 +346,12 @@ a {
   transform: none;
 }
 
+/* Project pages should render without waiting on scroll animations */
+.project-page .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;

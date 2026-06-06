@@ -267,6 +267,14 @@ const navAnchors = [...document.querySelectorAll(".nav-links a:not(.hidden-conte
 const navGroupToggle = document.querySelector(".nav-group__toggle");
 const navGroup = document.querySelector(".nav-group");
 const body = document.body;
+const projectPage = document.querySelector(".project-page");
+
+if (projectPage) {
+  projectPage.querySelectorAll(".reveal").forEach((item) => {
+    item.classList.add("is-visible");
+  });
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 const counters = document.querySelectorAll(".counter");
 const tiltCards = document.querySelectorAll(".tilt-card");
