@@ -7,5 +7,5 @@
   "organization": "Personal Project",
   "tags": ["ESP32", "E-Ink Display", "3D Printing"],
   "status": "documented",
-  "featured": true
+  "featured": false
 }

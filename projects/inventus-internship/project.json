@@ -7,5 +7,5 @@
   "organization": "Inventus Power",
   "tags": ["Python", "Embedded C", "Serial Communication", "Battery Systems"],
   "status": "documented",
-  "featured": true
+  "featured": false
 }

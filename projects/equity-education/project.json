@@ -7,5 +7,5 @@
   "organization": "Purdue University",
   "tags": ["LSTM", "Tkinter", "Forecasting", "Equity Analysis"],
   "status": "documented",
-  "featured": true
+  "featured": false
 }

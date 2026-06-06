@@ -1,0 +1,11 @@
+{
+  "slug": "bluetooth-wii-remote",
+  "title": "Bluetooth Wii Remote",
+  "category": "Embedded Systems",
+  "summary": "Handheld ESP32 Air Pointer with TP4056 charging, TPS63802 power regulation, BNO055 orientation sensing, BLE HID mouse emulation, custom KiCAD PCBs, and a 3D-printed enclosure.",
+  "timeline": "2025",
+  "organization": "Personal Project",
+  "tags": ["ESP32", "BNO055", "TPS63802", "TP4056", "KiCAD", "3D Printing"],
+  "status": "documented",
+  "featured": true
+}

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluetooth Wii Remote | Joey Squillaci</title>
+  <meta
+    name="description"
+    content="ESP32 Air Pointer — a Wii Remote-style Bluetooth HID mouse using an Adafruit BNO055 IMU, custom PCB hardware, and a 3D-printed enclosure."
+  >
+  <link rel="preload" href="assets/STL/WiiRemoteEnclosureV1.stl" as="fetch">
+  <link rel="preload" href="assets/STL/WiiRemoteEnclosurev8.stl" as="fetch">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="../../index.html#top">Home</a>
+          <div class="nav-group">
+            <button class="nav-group__toggle" type="button" aria-expanded="false">Projects</button>
+            <div class="nav-group__menu">
+              <a href="../../all-projects.html">All Projects</a>
+              <a href="../../projects/options-hub/index.html">Options Hub</a>
+              <a href="../../projects/16-bit-carry-select-adder/index.html">16-Bit Carry Select Adder</a>
+              <a href="../../projects/inventus-internship/index.html">Inventus Power</a>
+              <a href="../../projects/ornament-project/index.html">ESP32 Ornament</a>
+              <a href="../../projects/bluetooth-wii-remote/index.html">Bluetooth Wii Remote</a>
+              <a href="../../projects/equity-education/index.html">Equity Education</a>
+              <a data-feature="trades" href="../../projects/trades-ai-training/index.html">TRADES: AI Training</a>
+            </div>
+          </div>
+          <a href="../../experience.html">Experience</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="section container">
+        <div class="project-hero">
+          <div class="project-hero__copy reveal">
+            <p class="eyebrow">Embedded Systems | Personal Project</p>
+            <h1>Bluetooth Wii Remote</h1>
+            <div class="project-card__tags project-hero__tags">
+              <span>ESP32 DevKit C</span>
+              <span>BNO055 IMU</span>
+              <span>TPS63802</span>
+              <span>TP4056</span>
+              <span>BLE HID Mouse</span>
+              <span>3D Printing</span>
+            </div>
+            <p>
+              This project builds a Wii Remote–style air pointer around a handheld
+              electronics stack: an ESP32 DevKit C, an Adafruit BNO055 9-axis IMU, a
+              3.7 V lithium-ion battery, a TP4056 Micro USB charging module, and a
+              TPS63802 buck-boost converter. The controller tracks orientation in space
+              and presents itself to a host computer as a Bluetooth HID mouse, mapping
+              yaw and pitch to cursor position so the user can aim at the screen by
+              physically pointing the device.
+            </p>
+            <p>
+              The work evolved across two hardware generations. Version 1 used a custom
+              PCB to route directional button input, battery charging, and regulated
+              power through the handheld layout. Version 2 extended that foundation with
+              the BNO055 module to read absolute orientation and mimic Wii Remote
+              pointing behavior, with directional buttons providing fine manual panning
+              when needed.
+            </p>
+          </div>
+
+          <aside class="project-image-placeholder project-image-placeholder--top reveal" aria-label="Bluetooth Wii Remote project photo">
+            <img
+              class="project-image-placeholder__image"
+              src="assets/1.jpeg"
+              alt="Bluetooth Wii Remote ESP32 air pointer hardware build"
+            >
+            <p class="project-image-caption">Completed ESP32 Air Pointer controller build.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="metric-grid">
+          <article class="metric-card reveal">
+            <strong>Power</strong>
+            <span>3.7 V Li-ion cell with TP4056 charging and TPS63802 buck-boost regulation</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Control</strong>
+            <span>ESP32 DevKit C running BLE HID mouse firmware</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Sensing</strong>
+            <span>Adafruit BNO055 IMU for fused yaw and pitch orientation</span>
+          </article>
+          <article class="metric-card reveal">
+            <strong>Construction</strong>
+            <span>Custom KiCAD PCB, module integration, and 3D-printed enclosure</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Physical Electronics</h2>
+            <p>
+              The controller is built as a compact embedded product rather than a
+              breadboard prototype. Power enters through a TP4056 Micro USB charging
+              module, which manages charging for a 3.7 V lithium-ion battery. A
+              TPS63802 buck-boost converter then regulates that battery voltage so the
+              ESP32 DevKit C and Adafruit BNO055 IMU receive stable supply rails inside
+              the handheld enclosure.
+            </p>
+            <p>
+              The ESP32 DevKit C handles Bluetooth pairing, HID mouse reporting, button
+              reads, and the orientation-to-cursor control loop. The BNO055 provides
+              fused absolute orientation over I²C on GPIO21 and GPIO22, which is what
+              enables Wii Remote–style pointing instead of relying only on raw
+              accelerometer tilt.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Electronics Architecture</h2>
+            <ul>
+              <li><strong>TP4056 charging module:</strong> Micro USB input and Li-ion charge management</li>
+              <li><strong>3.7 V lithium-ion battery:</strong> Portable power source for untethered use</li>
+              <li><strong>TPS63802 buck-boost module:</strong> Regulated conversion across battery voltage swing</li>
+              <li><strong>ESP32 DevKit C:</strong> Main MCU, BLE stack, and HID mouse interface</li>
+              <li><strong>Adafruit BNO055:</strong> 9-axis IMU with onboard sensor fusion at address 0x28</li>
+              <li><strong>Directional buttons:</strong> GPIO13, GPIO14, GPIO26, and GPIO27 for manual panning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Project Overview</h2>
+            <p>
+              The ESP32 Air Pointer treats controller orientation as an absolute
+              screen position. Orientation is read from the BNO055, converted into a
+              target cursor location, and the BLE mouse continuously moves toward that
+              target. This produces Wii Remote–style pointing rather than relative
+              joystick-style motion.
+            </p>
+            <p>
+              Because the ESP32 cannot read the host&apos;s actual cursor position, the
+              firmware maintains an internal virtual cursor estimate and compensates
+              for OS mouse acceleration with tuned follow gain and movement scaling.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Signal Processing</h2>
+            <ul>
+              <li>Deadzone filtering on yaw and pitch to reduce jitter</li>
+              <li>Low-pass smoothing for steadier cursor movement</li>
+              <li>Automatic rejection of large orientation discontinuities</li>
+              <li>Button panning offsets for fine adjustment without re-aiming</li>
+              <li>Serial recenter command to reset references and return to screen center</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Build &amp; Demo</p>
+          <h2>Physical build photos and air pointer demonstration.</h2>
+          <p>
+            Hardware photos from the controller assembly alongside a screen-recording demo
+            of the ESP32 Air Pointer controlling cursor position through orientation.
+          </p>
+        </div>
+        <div class="build-showcase">
+          <div class="build-showcase__photos">
+            <figure class="build-showcase__card build-showcase__photo reveal">
+              <div class="build-showcase__media">
+                <img src="assets/1.jpeg" alt="Bluetooth Wii Remote project photo showing assembled controller electronics">
+              </div>
+              <figcaption>Assembled controller electronics inside the handheld enclosure.</figcaption>
+            </figure>
+            <figure class="build-showcase__card build-showcase__photo reveal">
+              <div class="build-showcase__media">
+                <img src="assets/2.jpeg" alt="Bluetooth Wii Remote project photo showing hardware layout and enclosure fit">
+              </div>
+              <figcaption>Hardware layout and enclosure fit during assembly.</figcaption>
+            </figure>
+            <figure class="build-showcase__card build-showcase__photo reveal">
+              <div class="build-showcase__media">
+                <img src="assets/3.jpeg" alt="Bluetooth Wii Remote project photo showing finished controller form factor">
+              </div>
+              <figcaption>Finished controller form factor with enclosure closed.</figcaption>
+            </figure>
+          </div>
+          <figure class="build-showcase__card build-showcase__video reveal">
+            <div class="build-showcase__media">
+              <video
+                class="build-showcase__video-player"
+                controls
+                playsinline
+                preload="none"
+                poster="assets/demo-poster.png"
+                aria-label="ESP32 Air Pointer demo video"
+              >
+                <source src="assets/demo.mov" type="video/quicktime">
+                Your browser does not support embedded video playback.
+              </video>
+            </div>
+            <figcaption>Demo of Wii Remote–style cursor control on a host display.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">KiCAD design</p>
+          <h2>PCB evolution from custom button input to BNO055 orientation tracking.</h2>
+          <p>
+            Version 1 captured the physical electronics stack in KiCAD: TP4056
+            charging, 3.7 V battery input, TPS63802 regulation, ESP32 DevKit C
+            interconnect, and directional button routing. Version 2 extended that
+            board design to integrate the Adafruit BNO055 for orientation-driven
+            pointing.
+          </p>
+        </div>
+
+        <article class="kicad-version-block content-panel reveal">
+          <h3>Version 1 — Custom Button Input PCB</h3>
+          <p>
+            The first revision captured the full physical electronics stack in a custom
+            PCB: TP4056 charging, 3.7 V battery input, TPS63802 buck-boost regulation,
+            ESP32 DevKit C interconnect, and routed directional button lines for the
+            handheld controller layout.
+          </p>
+          <div class="kicad-media-pair">
+            <figure class="kicad-media-card kicad-media-card--schematic reveal">
+              <p class="kicad-media-card__label">Schematic</p>
+              <div class="kicad-media-card__frame">
+                <img src="assets/v1/v1schematic.png" alt="Version 1 KiCAD schematic for the custom Wii Remote PCB">
+              </div>
+              <figcaption>V1 schematic showing charging, battery, regulation, and button routing.</figcaption>
+            </figure>
+            <figure class="kicad-media-card kicad-media-card--pcb reveal">
+              <p class="kicad-media-card__label">PCB Layout</p>
+              <div class="kicad-media-card__frame">
+                <img src="assets/v1/v1pcb.png" alt="Version 1 KiCAD PCB layout for the custom Wii Remote board">
+              </div>
+              <figcaption>V1 PCB layout for the original button-input and power implementation.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="kicad-version-block content-panel reveal">
+          <h3>Version 2 — BNO055 Orientation Module</h3>
+          <p>
+            The second revision kept the same charging and power architecture while
+            integrating the Adafruit BNO055 over I²C on GPIO21/22. That addition let the
+            firmware read fused orientation and map yaw and pitch directly to screen
+            position for Wii Remote–style pointing.
+          </p>
+          <div class="kicad-media-pair">
+            <figure class="kicad-media-card kicad-media-card--schematic reveal">
+              <p class="kicad-media-card__label">Schematic</p>
+              <div class="kicad-media-card__frame">
+                <img src="assets/v2/v2schematic.png" alt="Version 2 KiCAD schematic with BNO055 IMU integration">
+              </div>
+              <figcaption>V2 schematic with BNO055 IMU integration added to the power and control stack.</figcaption>
+            </figure>
+            <figure class="kicad-media-card kicad-media-card--pcb reveal">
+              <p class="kicad-media-card__label">PCB Layout</p>
+              <div class="kicad-media-card__frame">
+                <img src="assets/v2/v2pcb.png" alt="Version 2 KiCAD PCB layout with BNO055 module placement">
+              </div>
+              <figcaption>V2 PCB layout with module placement for the orientation-driven air pointer build.</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section class="section container">
+        <div class="content-grid">
+          <article class="content-panel reveal">
+            <h2>Cursor Mapping</h2>
+            <p>
+              Horizontal motion uses a 60° yaw edge mapping, while vertical motion uses
+              a more sensitive 33° pitch edge mapping. The firmware converts smoothed
+              relative yaw and pitch into a target screen coordinate, then drives the
+              BLE mouse toward that target using follow gain, max move step, and virtual
+              movement scaling tuned on a 3440×1440 ultrawide display running macOS.
+            </p>
+          </article>
+
+          <article class="content-panel reveal">
+            <h2>Known Limitations</h2>
+            <ul>
+              <li>Virtual cursor tracking can drift because the host cursor position is not readable</li>
+              <li>OS mouse acceleration affects long-term pointing accuracy</li>
+              <li>BNO055 yaw occasionally produces sudden discontinuities despite filtering</li>
+              <li>Periodic recentering via serial command may be required during extended use</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Firmware</p>
+          <h2>ESP32 air pointer control loop in `wiiRemoteMotionV1.ino`.</h2>
+          <p>
+            The firmware initializes the BNO055, configures directional buttons with
+            internal pull-ups, starts BLE HID mouse advertising, and runs a 5 ms update
+            loop that maps orientation to absolute cursor targets.
+          </p>
+        </div>
+        <div class="code-viewer reveal">
+          <div class="code-viewer__header">
+            <span>assets/wiiRemoteMotionV1.ino</span>
+            <a href="assets/wiiRemoteMotionV1.ino" target="_blank" rel="noreferrer">Open raw file</a>
+          </div>
+          <pre><code id="firmware-code">#include &lt;Wire.h&gt;
+#include &lt;Adafruit_Sensor.h&gt;
+#include &lt;Adafruit_BNO055.h&gt;
+#include &lt;utility/imumaths.h&gt;
+#include &lt;HijelHID_BLEMouse.h&gt;
+#include &lt;math.h&gt;
+
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);
+HijelBLEMouse mouse(&quot;ESP32 Air Pointer&quot;, &quot;Joey&quot;, 100);
+
+// ===== USER CONFIG =====
+const int SCREEN_WIDTH  = 3440;
+const int SCREEN_HEIGHT = 1440;
+
+// ===== BUTTON INPUTS =====
+const int BUTTON_UP_PIN    = 13;
+const int BUTTON_DOWN_PIN  = 14;
+const int BUTTON_LEFT_PIN  = 27;
+const int BUTTON_RIGHT_PIN = 26;
+
+// Higher = faster button panning
+const float buttonPanStep = 4.0f;
+
+float buttonOffsetX = 0.0f;
+float buttonOffsetY = 0.0f;
+
+// ===== ORIENTATION OFFSETS =====
+float offsetYaw = 0.0f;
+float offsetPitch = 0.0f;
+float offsetRoll = 0.0f;
+
+// ===== VIRTUAL CURSOR POSITION =====
+// This represents where the code believes the cursor is,
+// relative to screen center.
+float virtualX = 0.0f;
+float virtualY = 0.0f;
+
+// ===== SCREEN MAPPING =====
+// How many degrees of controller motion map to the screen edge.
+const float yawEdgeDeg = 60.0f;
+const float pitchEdgeDeg = 33.0f;
+
+// Center calibration for macOS / display scaling.
+const float CENTER_X_SCALE = 1.35f;
+const float CENTER_Y_SCALE = 1.35f;
+
+// ===== FILTERING =====
+const float yawDeadzoneDeg = 0.4f;
+const float pitchDeadzoneDeg = 0.4f;
+
+const float maxYawJumpDeg = 35.0f;
+const float maxPitchJumpDeg = 35.0f;
+
+float lastValidYaw = 0.0f;
+float lastValidPitch = 0.0f;
+
+float smoothYaw = 0.0f;
+float smoothPitch = 0.0f;
+
+// Lower = smoother but slower. Higher = faster but shakier.
+const float angleSmoothing = 0.18f;
+
+// ===== CURSOR BEHAVIOR =====
+// How aggressively cursor moves toward desired absolute position.
+const float followGain = 0.11f;
+
+// Maximum mouse counts sent per update.
+const int maxMoveStep = 18;
+
+// If error is smaller than this, stop moving.
+const float stopThreshold = 1.5f;
+
+// Compensation for OS mouse scaling / acceleration.
+// Tune this if virtual cursor and real cursor slowly separate.
+const float virtualMovementScale = 0.45f;
+
+// ===== TIMING =====
+const unsigned long updateMs = 5;
+unsigned long lastUpdate = 0;
+unsigned long lastPrint = 0;
+
+// ===== HELPERS =====
+float wrapAngle180(float deg) {
+  while (deg &gt; 180.0f) deg -= 360.0f;
+  while (deg &lt; -180.0f) deg += 360.0f;
+  return deg;
+}
+
+float clampFloat(float value, float minVal, float maxVal) {
+  if (value &lt; minVal) return minVal;
+  if (value &gt; maxVal) return maxVal;
+  return value;
+}
+
+int clampInt(int value, int minVal, int maxVal) {
+  if (value &lt; minVal) return minVal;
+  if (value &gt; maxVal) return maxVal;
+  return value;
+}
+
+float applyDeadzone(float value, float deadzone) {
+  if (fabs(value) &lt; deadzone) return 0.0f;
+  return value;
+}
+
+float lowPass(float previous, float current, float alpha) {
+  return previous + alpha * (current - previous);
+}
+
+float filterYaw(float newYaw) {
+  if (isnan(newYaw) || isinf(newYaw)) {
+    return lastValidYaw;
+  }
+
+  float yawDelta = wrapAngle180(newYaw - lastValidYaw);
+
+  if (fabs(yawDelta) &gt; maxYawJumpDeg) {
+    offsetYaw = wrapAngle180(offsetYaw + yawDelta);
+    return lastValidYaw;
+  }
+
+  lastValidYaw = newYaw;
+  return newYaw;
+}
+
+float filterPitch(float newPitch) {
+  if (isnan(newPitch) || isinf(newPitch)) {
+    return lastValidPitch;
+  }
+
+  float pitchDelta = newPitch - lastValidPitch;
+
+  if (fabs(pitchDelta) &gt; maxPitchJumpDeg) {
+    offsetPitch = wrapAngle180(offsetPitch + pitchDelta);
+    return lastValidPitch;
+  }
+
+  lastValidPitch = newPitch;
+  return newPitch;
+}
+
+void moveMouseCounts(int totalDx, int totalDy) {
+  while (totalDx != 0 || totalDy != 0) {
+    int stepX = 0;
+    int stepY = 0;
+
+    if (totalDx &gt; 0) stepX = min(totalDx, 100);
+    if (totalDx &lt; 0) stepX = max(totalDx, -100);
+
+    if (totalDy &gt; 0) stepY = min(totalDy, 100);
+    if (totalDy &lt; 0) stepY = max(totalDy, -100);
+
+    mouse.move(stepX, stepY);
+
+    totalDx -= stepX;
+    totalDy -= stepY;
+
+    delay(3);
+  }
+}
+
+// ===== HARD CURSOR CENTERING =====
+void moveCursorToCenter() {
+  if (!mouse.isPaired()) {
+    Serial.println(&quot;Mouse not paired. Cursor was not centered.&quot;);
+    return;
+  }
+
+  Serial.println(&quot;Centering cursor...&quot;);
+
+  moveMouseCounts(-12000, -12000);
+  delay(150);
+
+  int centerXCounts = (int)lround((SCREEN_WIDTH / 2.0f) * CENTER_X_SCALE);
+  int centerYCounts = (int)lround((SCREEN_HEIGHT / 2.0f) * CENTER_Y_SCALE);
+
+  moveMouseCounts(centerXCounts, centerYCounts);
+  delay(150);
+
+  virtualX = 0.0f;
+  virtualY = 0.0f;
+
+  Serial.println(&quot;Cursor centered.&quot;);
+}
+
+// ===== RECENTER =====
+void recenterFromCurrent() {
+  sensors_event_t event;
+  bno.getEvent(&amp;event);
+
+  offsetYaw = event.orientation.x;
+
+  // Swapped pitch/roll mapping from your current setup.
+  offsetRoll = event.orientation.y;
+  offsetPitch = event.orientation.z;
+
+  lastValidYaw = 0.0f;
+  lastValidPitch = 0.0f;
+
+  smoothYaw = 0.0f;
+  smoothPitch = 0.0f;
+
+  virtualX = 0.0f;
+  virtualY = 0.0f;
+
+  buttonOffsetX = 0.0f;
+  buttonOffsetY = 0.0f;
+
+  moveCursorToCenter();
+
+  lastUpdate = millis();
+
+  Serial.println(&quot;Recenter complete.&quot;);
+}
+
+// ===== SETUP =====
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+
+  Serial.println(&quot;BNO055 Absolute Pointer Starting...&quot;);
+
+  pinMode(BUTTON_UP_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_DOWN_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_LEFT_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_RIGHT_PIN, INPUT_PULLUP);
+
+  Wire.begin(21, 22);
+  Wire.setClock(400000);
+
+  if (!bno.begin()) {
+    Serial.println(&quot;BNO055 NOT detected.&quot;);
+    while (1) {
+      delay(100);
+    }
+  }
+
+  bno.setExtCrystalUse(true);
+  mouse.begin();
+
+  delay(300);
+  recenterFromCurrent();
+
+  Serial.println(&quot;Ready. Press &#x27;c&#x27; to recenter.&quot;);
+}
+
+// ===== LOOP =====
+void loop() {
+  while (Serial.available()) {
+    char input = Serial.read();
+
+    if (input == &#x27;c&#x27; || input == &#x27;C&#x27;) {
+      recenterFromCurrent();
+    }
+  }
+
+  if (millis() - lastUpdate &lt; updateMs) {
+    return;
+  }
+  lastUpdate = millis();
+
+  sensors_event_t event;
+  bno.getEvent(&amp;event);
+
+  float yaw = event.orientation.x;
+
+  // Swapped pitch/roll mapping from your current setup.
+  float roll = event.orientation.y;
+  float pitch = event.orientation.z;
+
+  float rawRelYaw = wrapAngle180(yaw - offsetYaw);
+  float rawRelPitch = wrapAngle180(pitch - offsetPitch);
+  float relRoll = wrapAngle180(roll - offsetRoll);
+
+  float relYaw = filterYaw(rawRelYaw);
+  float relPitch = filterPitch(rawRelPitch);
+
+  relYaw = applyDeadzone(relYaw, yawDeadzoneDeg);
+  relPitch = applyDeadzone(relPitch, pitchDeadzoneDeg);
+
+  smoothYaw = lowPass(smoothYaw, relYaw, angleSmoothing);
+  smoothPitch = lowPass(smoothPitch, relPitch, angleSmoothing);
+
+  // Convert controller angle directly to desired screen position.
+  // This is the Wii-style behavior: point angle maps to screen location.
+  float halfScreenX = SCREEN_WIDTH / 2.0f;
+  float halfScreenY = SCREEN_HEIGHT / 2.0f;
+
+  // ===== BUTTON-BASED TARGET POSITION OFFSET =====
+  // Buttons are active LOW because INPUT_PULLUP is used.
+  // Holding a button continuously shifts the target position.
+  if (digitalRead(BUTTON_UP_PIN) == LOW) {
+    buttonOffsetY -= buttonPanStep;
+  }
+
+  if (digitalRead(BUTTON_DOWN_PIN) == LOW) {
+    buttonOffsetY += buttonPanStep;
+  }
+
+  if (digitalRead(BUTTON_LEFT_PIN) == LOW) {
+    buttonOffsetX -= buttonPanStep;
+  }
+
+  if (digitalRead(BUTTON_RIGHT_PIN) == LOW) {
+    buttonOffsetX += buttonPanStep;
+  }
+
+  // No clamp here: button offsets are allowed to keep moving beyond
+  // the internal screen bounds so the cursor will not hit an artificial wall.
+
+  float targetX = ((smoothYaw / yawEdgeDeg) * halfScreenX) + buttonOffsetX;
+  float targetY = (-(smoothPitch / pitchEdgeDeg) * halfScreenY) + buttonOffsetY;
+
+  // No target clamp here: removing the artificial internal screen boundary.
+  // The actual operating system cursor edge will be the only real boundary.
+
+  float errorX = targetX - virtualX;
+  float errorY = targetY - virtualY;
+
+  int dx = 0;
+  int dy = 0;
+
+  if (fabs(errorX) &gt; stopThreshold) {
+    dx = clampInt((int)lround(errorX * followGain), -maxMoveStep, maxMoveStep);
+  }
+
+  if (fabs(errorY) &gt; stopThreshold) {
+    dy = clampInt((int)lround(errorY * followGain), -maxMoveStep, maxMoveStep);
+  }
+
+  if (mouse.isPaired() &amp;&amp; (dx != 0 || dy != 0)) {
+    mouse.move(dx, dy);
+
+    virtualX += dx * virtualMovementScale;
+    virtualY += dy * virtualMovementScale;
+
+    // No virtualX/virtualY clamp here: removing the artificial internal screen boundary.
+  }
+
+  if (millis() - lastPrint &gt; 150) {
+    lastPrint = millis();
+
+    Serial.print(&quot;RawYaw:&quot;);
+    Serial.print(rawRelYaw, 1);
+    Serial.print(&quot; Yaw:&quot;);
+    Serial.print(relYaw, 1);
+    Serial.print(&quot; SmoothYaw:&quot;);
+    Serial.print(smoothYaw, 1);
+
+    Serial.print(&quot; RawPitch:&quot;);
+    Serial.print(rawRelPitch, 1);
+    Serial.print(&quot; Pitch:&quot;);
+    Serial.print(relPitch, 1);
+    Serial.print(&quot; SmoothPitch:&quot;);
+    Serial.print(smoothPitch, 1);
+
+    Serial.print(&quot; Roll:&quot;);
+    Serial.print(relRoll, 1);
+
+    Serial.print(&quot; | ButtonOffsetX:&quot;);
+    Serial.print(buttonOffsetX, 0);
+    Serial.print(&quot; ButtonOffsetY:&quot;);
+    Serial.print(buttonOffsetY, 0);
+
+    Serial.print(&quot; | TargetX:&quot;);
+    Serial.print(targetX, 0);
+    Serial.print(&quot; VirtualX:&quot;);
+    Serial.print(virtualX, 0);
+
+    Serial.print(&quot; | TargetY:&quot;);
+    Serial.print(targetY, 0);
+    Serial.print(&quot; VirtualY:&quot;);
+    Serial.print(virtualY, 0);
+
+    Serial.print(&quot; | dx:&quot;);
+    Serial.print(dx);
+    Serial.print(&quot; dy:&quot;);
+    Serial.println(dy);
+  }
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">3D model views</p>
+          <h2>Interactive STL previews of the V1 and V2 enclosure designs.</h2>
+          <p>
+            Version 1 used the first enclosure iteration. Version 2 matured through
+            later revisions, with V8 representing the enclosure paired with the
+            BNO055-based build.
+          </p>
+        </div>
+        <div class="stl-viewer-grid">
+          <article class="stl-viewer-card reveal">
+            <h3>Version 1 Enclosure</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="assets/STL/WiiRemoteEnclosureV1.stl"
+              data-model-name="Wii Remote Enclosure V1"
+            >
+              <div class="stl-viewer__status">Loading `WiiRemoteEnclosureV1.stl`...</div>
+            </div>
+          </article>
+
+          <article class="stl-viewer-card reveal">
+            <h3>Version 2 Enclosure (V8)</h3>
+            <div
+              class="stl-viewer"
+              data-stl-src="assets/STL/WiiRemoteEnclosurev8.stl"
+              data-model-name="Wii Remote Enclosure V8"
+            >
+              <div class="stl-viewer__status">Loading `WiiRemoteEnclosurev8.stl`...</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script type="module" src="../../stl-viewer.js"></script>
+
+</body>
+</html>

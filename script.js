@@ -74,6 +74,7 @@ const projects = [
       "Web-based options dashboard with React and FastAPI for ledger tracking, P/L monitoring, option chain pricing via Tradier, and Gemini-assisted position discussion.",
     tags: ["React", "FastAPI", "SQLite"],
     pageHref: "projects/options-hub/index.html",
+    featured: true,
   },
   {
     id: "carry-select-adder",
@@ -84,6 +85,7 @@ const projects = [
       "Designed and verified a custom 16-bit carry-select adder in Cadence Virtuoso, achieving a 410.4 ps schematic delay and a 1.245 ns post-layout delay while staying within project constraints.",
     tags: ["Cadence Virtuoso", "CMOS Design", "Timing Analysis"],
     pageHref: "projects/16-bit-carry-select-adder/index.html",
+    featured: true,
   },
   {
     id: "military-bcds",
@@ -94,6 +96,7 @@ const projects = [
       "High-level case study of internship work involving embedded software, serial communication, battery-system testing, documentation, and production-floor engineering support.",
     tags: ["Python", "Embedded C", "Battery Systems"],
     pageHref: "projects/inventus-internship/index.html",
+    featured: false,
   },
   {
     id: "cad-viewer-placeholder",
@@ -104,6 +107,18 @@ const projects = [
       "Interactive holiday ornament built around an ESP32, charging module, buck-boost converter, and e-ink display to show rotating Christmas-themed messages.",
     tags: ["ESP32", "E-Ink Display", "3D Printing"],
     pageHref: "projects/ornament-project/index.html",
+    featured: false,
+  },
+  {
+    id: "bluetooth-wii-remote",
+    slug: "bluetooth-wii-remote",
+    category: "Embedded Systems",
+    title: "Bluetooth Wii Remote",
+    summary:
+      "Handheld ESP32 Air Pointer with TP4056 charging, TPS63802 power regulation, BNO055 orientation sensing, BLE HID mouse emulation, custom KiCAD PCBs, and a 3D-printed enclosure.",
+    tags: ["ESP32", "BNO055", "TPS63802"],
+    pageHref: "projects/bluetooth-wii-remote/index.html",
+    featured: true,
   },
   {
     id: "equity-education",
@@ -114,6 +129,7 @@ const projects = [
       "Educational equity analysis prototype using an LSTM model and interactive GUI to connect predictions with technical market context.",
     tags: ["LSTM", "Tkinter GUI", "Equity Analysis"],
     pageHref: "projects/equity-education/index.html",
+    featured: false,
   },
   {
     id: "trades-ai-training",
@@ -177,8 +193,13 @@ function renderProjects() {
     return;
   }
 
-  projectsGrid.innerHTML = projects
+  const isAllProjectsPage = projectsGrid.classList.contains("projects-grid--stacked");
+  const visibleProjects = projects
     .filter((project) => isFeatureEnabled(project.feature))
+    .filter((project) => isAllProjectsPage || project.featured)
+    .slice(0, isAllProjectsPage ? undefined : 3);
+
+  projectsGrid.innerHTML = visibleProjects
     .map((project) => {
       const tags = project.tags
         .map((tag) => `<span>${tag}</span>`)
