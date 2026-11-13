@@ -66,6 +66,17 @@ function applyFeatureVisibility() {
 
 const projects = [
   {
+    id: "ford-e350-camper",
+    slug: "ford-e350-camper",
+    category: "Vehicle Systems & Fabrication",
+    title: "Ford E-350 Camper Conversion",
+    summary:
+      "Five-month Ford E-350 shuttle-bus-to-camper conversion with solar, a 400 Ah LiFePO4 power system, custom cabinetry, upholstered seating, and a welded convertible dinette-to-bed system.",
+    tags: ["Solar + LiFePO4", "Vehicle Systems", "Fabrication"],
+    pageHref: "projects/ford-e350-camper/index.html",
+    featured: true,
+  },
+  {
     id: "options-hub",
     slug: "options-hub",
     category: "Trading Tools",
@@ -146,10 +157,23 @@ const projects = [
 
 const experience = [
   {
+    id: "tackle-ai",
+    role: "AI Engineering Development Lead",
+    company: "TackleAI",
+    period: "June 2026 - Present",
+    summary:
+      "Leading an AI-assisted development team delivering scalable OCR and document-intelligence solutions for healthcare and legal industries.",
+    highlights: [
+      "AI-powered processing pipelines, extraction workflows, and QA tooling",
+      "Self-hosted LLM implementation with GLM, Kimi, and Qwen",
+      "Secure architecture, APIs, ingestion, and data storage for HIPAA-aligned PII/PHI protection",
+    ],
+  },
+  {
     id: "international-motors",
     role: "Lead System Engineer",
     company: "International Motors",
-    period: "January 2024 - Present",
+    period: "January 2024 - June 2026",
     summary:
       "Working on vehicle network integration and diagnostics with a focus on SAE and J1939 standards, signal definition, DBC maintenance, and communication analysis across module-based systems.",
     highlights: [

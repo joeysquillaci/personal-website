@@ -1043,6 +1043,169 @@ a {
   font-size: 0.95rem;
 }
 
+.camper-timeline {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.camper-timeline__entry {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.35fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1.25rem 1.4rem;
+  background: linear-gradient(180deg, rgba(18, 35, 56, 0.85), rgba(10, 22, 38, 0.72));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.camper-timeline__date {
+  margin: 0;
+  color: var(--accent-two);
+  font-weight: 700;
+}
+
+.camper-timeline__entry h3 {
+  margin: 0 0 0.4rem;
+}
+
+.camper-timeline__entry p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.camper-cost-list {
+  margin: 1.2rem 0 0;
+}
+
+.camper-cost-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.camper-cost-list dt {
+  color: var(--muted);
+}
+
+.camper-cost-list dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.camper-gallery {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.camper-gallery__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.camper-gallery__tab,
+.camper-gallery__control,
+.camper-gallery__thumbnail {
+  font: inherit;
+  cursor: pointer;
+}
+
+.camper-gallery__tab {
+  padding: 0.65rem 0.9rem;
+  color: var(--muted);
+  background: rgba(10, 22, 38, 0.72);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.camper-gallery__tab.is-active {
+  color: var(--text);
+  border-color: var(--accent-two);
+  background: rgba(48, 200, 188, 0.12);
+}
+
+.camper-gallery__stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.camper-gallery__figure {
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(18, 35, 56, 0.85), rgba(10, 22, 38, 0.72));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.camper-gallery__image {
+  display: block;
+  width: 100%;
+  height: min(68vh, 720px);
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(4, 11, 20, 0.8);
+}
+
+.camper-gallery__caption {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.camper-gallery__control {
+  width: 2.85rem;
+  height: 2.85rem;
+  color: var(--text);
+  font-size: 1.45rem;
+  background: rgba(10, 22, 38, 0.84);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+.camper-gallery__control:hover,
+.camper-gallery__tab:hover {
+  border-color: var(--accent-two);
+}
+
+.camper-gallery__thumbnail-list {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding: 1rem 0 0.35rem;
+  scrollbar-color: var(--accent-two) transparent;
+}
+
+.camper-gallery__thumbnail {
+  flex: 0 0 92px;
+  height: 68px;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(10, 22, 38, 0.72);
+  border: 2px solid transparent;
+  border-radius: 9px;
+}
+
+.camper-gallery__thumbnail.is-active {
+  border-color: var(--accent-two);
+}
+
+.camper-gallery__thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: rgba(4, 11, 20, 0.8);
+}
+
 .stl-viewer-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1193,6 +1356,23 @@ a {
 }
 
 @media (max-width: 900px) {
+  .camper-timeline__entry {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .camper-gallery__stage {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .camper-gallery__control {
+    display: none;
+  }
+
+  .camper-gallery__image {
+    height: min(62vh, 560px);
+  }
   .build-showcase {
     grid-template-columns: 1fr;
   }

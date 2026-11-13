@@ -1,0 +1,488 @@
+[
+  {
+    "file": "progress/2026-06-10-initial-condition-01.jpeg",
+    "source": "IMG_6638.jpeg",
+    "captured": "2026-06-10",
+    "phase": "initial-condition"
+  },
+  {
+    "file": "progress/2026-06-10-initial-condition-02.jpeg",
+    "source": "IMG_6640.jpeg",
+    "captured": "2026-06-10",
+    "phase": "initial-condition"
+  },
+  {
+    "file": "progress/2026-06-10-initial-condition-03.jpeg",
+    "source": "IMG_6644.jpeg",
+    "captured": "2026-06-10",
+    "phase": "initial-condition"
+  },
+  {
+    "file": "progress/2026-06-15-initial-condition-01.jpeg",
+    "source": "IMG_6670.jpeg",
+    "captured": "2026-06-15",
+    "phase": "initial-condition"
+  },
+  {
+    "file": "progress/2026-07-25-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_6943.jpeg",
+    "captured": "2026-07-25",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-07-25-framing-insulation-electrical-02.jpeg",
+    "source": "IMG_6947.jpeg",
+    "captured": "2026-07-25",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-07-25-framing-insulation-electrical-03.jpeg",
+    "source": "IMG_6949.jpeg",
+    "captured": "2026-07-25",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-07-26-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_6959.jpeg",
+    "captured": "2026-07-26",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-07-29-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_6982.jpeg",
+    "captured": "2026-07-29",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-07-31-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_6991.jpeg",
+    "captured": "2026-07-31",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-03-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_7010.jpeg",
+    "captured": "2026-08-03",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-05-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_7020.jpeg",
+    "captured": "2026-08-05",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-05-framing-insulation-electrical-02.jpeg",
+    "source": "IMG_7028.jpeg",
+    "captured": "2026-08-05",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-05-framing-insulation-electrical-03.jpeg",
+    "source": "IMG_7029.jpeg",
+    "captured": "2026-08-05",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-08-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_7053.jpeg",
+    "captured": "2026-08-08",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-09-framing-insulation-electrical-01.jpeg",
+    "source": "IMG_7055.jpeg",
+    "captured": "2026-08-09",
+    "phase": "framing-insulation-electrical"
+  },
+  {
+    "file": "progress/2026-08-11-solar-and-power-01.jpeg",
+    "source": "IMG_7096.jpeg",
+    "captured": "2026-08-11",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-11-solar-and-power-02.jpeg",
+    "source": "IMG_7097.jpeg",
+    "captured": "2026-08-11",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-12-solar-and-power-01.jpeg",
+    "source": "IMG_7105.jpeg",
+    "captured": "2026-08-12",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-14-solar-and-power-01.jpeg",
+    "source": "IMG_7137.jpeg",
+    "captured": "2026-08-14",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-14-solar-and-power-02.jpeg",
+    "source": "IMG_7139.jpeg",
+    "captured": "2026-08-14",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-19-solar-and-power-01.jpeg",
+    "source": "IMG_7182.jpeg",
+    "captured": "2026-08-19",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-20-solar-and-power-01.jpeg",
+    "source": "IMG_7218.jpeg",
+    "captured": "2026-08-20",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-22-solar-and-power-01.jpeg",
+    "source": "IMG_7222.jpeg",
+    "captured": "2026-08-22",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-23-solar-and-power-01.jpeg",
+    "source": "IMG_7230.jpeg",
+    "captured": "2026-08-23",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-26-solar-and-power-01.jpeg",
+    "source": "IMG_7250.jpeg",
+    "captured": "2026-08-26",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-26-solar-and-power-02.jpeg",
+    "source": "IMG_7251.jpeg",
+    "captured": "2026-08-26",
+    "phase": "solar-and-power"
+  },
+  {
+    "file": "progress/2026-08-29-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7265.jpeg",
+    "captured": "2026-08-29",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-08-29-cabinetry-and-finishes-02.jpeg",
+    "source": "IMG_7266.jpeg",
+    "captured": "2026-08-29",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-08-30-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7269.jpeg",
+    "captured": "2026-08-30",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-09-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7324.jpeg",
+    "captured": "2026-09-09",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-11-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7328.jpeg",
+    "captured": "2026-09-11",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-12-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7341.jpeg",
+    "captured": "2026-09-12",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-14-cabinetry-and-finishes-01.jpeg",
+    "source": "IMG_7358.jpeg",
+    "captured": "2026-09-14",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-14-cabinetry-and-finishes-02.jpeg",
+    "source": "IMG_7360.jpeg",
+    "captured": "2026-09-14",
+    "phase": "cabinetry-and-finishes"
+  },
+  {
+    "file": "progress/2026-09-21-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7397.jpeg",
+    "captured": "2026-09-21",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-09-23-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7401.jpeg",
+    "captured": "2026-09-23",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-02-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7437.jpeg",
+    "captured": "2026-10-02",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-11-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7477.jpeg",
+    "captured": "2026-10-11",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-12-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7484.jpeg",
+    "captured": "2026-10-12",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-16-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7498.jpeg",
+    "captured": "2026-10-16",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-16-interior-systems-and-upholstery-02.jpeg",
+    "source": "IMG_7500.jpeg",
+    "captured": "2026-10-16",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-17-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7518.jpeg",
+    "captured": "2026-10-17",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-20-interior-systems-and-upholstery-01.jpeg",
+    "source": "IMG_7545.jpeg",
+    "captured": "2026-10-20",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-20-interior-systems-and-upholstery-02.jpeg",
+    "source": "IMG_7546.jpeg",
+    "captured": "2026-10-20",
+    "phase": "interior-systems-and-upholstery"
+  },
+  {
+    "file": "progress/2026-10-30-convertible-dinette-01.jpeg",
+    "source": "IMG_7594.jpeg",
+    "captured": "2026-10-30",
+    "phase": "convertible-dinette"
+  },
+  {
+    "file": "progress/2026-10-30-convertible-dinette-02.jpeg",
+    "source": "IMG_7595.jpeg",
+    "captured": "2026-10-30",
+    "phase": "convertible-dinette"
+  },
+  {
+    "file": "progress/2026-10-30-convertible-dinette-03.jpeg",
+    "source": "IMG_7596.jpeg",
+    "captured": "2026-10-30",
+    "phase": "convertible-dinette"
+  },
+  {
+    "file": "progress/2026-11-06-convertible-dinette-01.jpeg",
+    "source": "IMG_7624.jpeg",
+    "captured": "2026-11-06",
+    "phase": "convertible-dinette"
+  },
+  {
+    "file": "progress/2026-11-06-convertible-dinette-02.jpeg",
+    "source": "IMG_7629.jpeg",
+    "captured": "2026-11-06",
+    "phase": "convertible-dinette"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-01.jpeg",
+    "source": "finishedpics/IMG_7630.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-02.jpeg",
+    "source": "finishedpics/IMG_7631.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-03.jpeg",
+    "source": "finishedpics/IMG_7632.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-04.jpeg",
+    "source": "finishedpics/IMG_7634.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-05.jpeg",
+    "source": "finishedpics/IMG_7635.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-06.jpeg",
+    "source": "finishedpics/IMG_7636.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-07.jpeg",
+    "source": "finishedpics/IMG_7637.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-08.jpeg",
+    "source": "finishedpics/IMG_7638.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-09.jpeg",
+    "source": "finishedpics/IMG_7639.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-10.jpeg",
+    "source": "finishedpics/IMG_7640.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-11.jpeg",
+    "source": "finishedpics/IMG_7641.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-12.jpeg",
+    "source": "finishedpics/IMG_7642.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-13.jpeg",
+    "source": "finishedpics/IMG_7643.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-14.jpeg",
+    "source": "finishedpics/IMG_7644.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-15.jpeg",
+    "source": "finishedpics/IMG_7645.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-16.jpeg",
+    "source": "finishedpics/IMG_7646.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-17.jpeg",
+    "source": "finishedpics/IMG_7648.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-18.jpeg",
+    "source": "finishedpics/IMG_7649.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-19.jpeg",
+    "source": "finishedpics/IMG_7650.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-20.jpeg",
+    "source": "finishedpics/IMG_7651.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-21.jpeg",
+    "source": "finishedpics/IMG_7652.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-22.jpeg",
+    "source": "finishedpics/IMG_7653.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-23.jpeg",
+    "source": "finishedpics/IMG_7654.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-24.jpeg",
+    "source": "finishedpics/IMG_7655 2.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-25.jpeg",
+    "source": "finishedpics/IMG_7655.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-26.jpeg",
+    "source": "finishedpics/IMG_7656.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-27.jpeg",
+    "source": "finishedpics/IMG_7657.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-28.jpeg",
+    "source": "finishedpics/IMG_7659.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-29.jpeg",
+    "source": "finishedpics/IMG_7660.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-30.jpeg",
+    "source": "finishedpics/IMG_7661.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  },
+  {
+    "file": "v1/2026-11-06-v1-complete-31.jpeg",
+    "source": "finishedpics/IMG_7662.jpeg",
+    "captured": "2026-11-06",
+    "phase": "v1-complete"
+  }
+]
